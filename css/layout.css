@@ -1,0 +1,1844 @@
+/* **********************************************************************************
+ * Class naming convention used for items in this CSS file
+ * The following item classes are used for item listing i.e.: category template , home, etc
+ *    - item-hg: "Item Holdaer Grid box, used to hold several item-u boxes"
+ *    - item-hl: "Item Holdaer List box, used to hold several item-u boxes"
+ *    - item-u: "Item unit box, holds all the item info"
+ *
+ * The ID #item is used for the item template so it can handle the same classes created for
+ * the category items but styled for this template
+ * 
+ * 
+ * item-lview, item-gview, item-grid, item-list are just used in the JS code 
+ * for changing the view of the items in the category template
+ ******************************************************************************** */
+/* ------------------------------------------------------------------------
+ *   Colors
+ ------------------------------------------------------------------------ */
+a
+{
+  color: #0048A6;
+text-decoration:none;
+}
+
+textarea
+{
+  width: 100%;
+}
+
+.loginBar
+{
+  background-color: #e7e7e7;
+}
+
+#searchBar
+{
+  background-color: #E29B0F;
+}
+
+#searchBar a
+{
+  color: #fff;
+}
+
+#searchBar p
+{
+  color: #4F4C45;
+}
+
+#searchBar .searchBtn
+{
+  color:#FFF;
+}
+
+.header1, .header2, .header3
+{
+  color: #fff;
+}
+
+.nav-section .main li:hover
+{
+  background-color: #dedede;
+}
+
+.item-u .item-desc .code, .item-desc .code
+{
+  color: #aeaeae;
+}
+
+.item-u .item-desc .price .dollars, #item .item-desc .price .dollars, .item-u .item-desc .price .symbol, #item .item-desc .price .symbol
+{
+  color: #DFA200;
+}
+
+.item-u .item-desc .price .cents, #item .item-desc .price .cents
+{
+  color:#AAAAAA;
+}
+
+
+.item-price-saved, .item-price
+{
+  color: #AF0A0A;
+}
+
+#item .item-section h4, #item .item-ldesc h4
+{
+  background-color:#40A235;
+  color:#fff;
+}
+
+#item .matrix .productTable .vLabel
+{ 
+  background-color: #DFDFDF;
+}
+
+#item .matrix .productTable th.blankCorner
+{ 
+  background-color: #fff;
+}
+
+.odd
+{
+  background-color: #fff;
+}
+
+.even
+{
+  background-color: #E6E6E6;
+}
+
+.notice, .shippedTo,  #payment_method, #giftCertificates, .passchanged, .question, .orderNo
+{
+  background-color: #FFF2CF;
+}
+
+.warning, .warning2
+{
+  background-color:#FFC19F;
+  color:#8F0000;
+}
+
+.btnclass, .btnLogin, .btnCheckout
+{
+  background-color:#DFDFDF;
+}
+
+.needed_star
+{
+  color: #bf0000;
+}
+
+.checkout-bc li.focus
+{
+  background-color:#dfdfdf;
+  color:#CF0000;
+}
+
+.whatsthis
+{
+  color:#aeaeae;
+}
+
+.productCount 
+{
+  color: #666;
+}
+
+#contactUs .question #Email
+{
+  background-color: rgb(255, 255, 160);
+}
+
+.resultNav
+{
+  background-color:#E6E6E6;
+}
+
+.resultNav .pages .pagnLink:hover
+{
+  background-color:#D6D6D6;
+}
+
+#reviewDetails .reviewBody p.author
+{
+  color:#7F7F7F;  
+}
+
+/* ------------------------------------------------------------------------
+ *   layout
+ ------------------------------------------------------------------------ */ 
+h1
+{
+  padding-bottom: 5px;
+}
+
+h2
+{
+  padding-bottom: 5px;
+}
+ 
+ #logo
+{
+  background-image: url(../images5/logo.gif);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  height:57px;
+  width:178px;
+}
+
+/* ----------footer navigation----------- */
+#ft
+{
+  border-top:1px solid #aeaeae;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  padding-top:10px;
+  background-color:#E7E7E7;
+}
+
+#ft .ft-nav{
+	float:left;
+	font-size:10px;
+	width:192px;
+}
+
+#ft .ft-nav ul {
+	margin:0 auto;
+	width:170px;
+}
+
+.ft-navUl .ft-nav .titleUl {
+	font-size:11px;
+	font-weight:bold;
+	margin:0 auto 0 10px;
+}
+
+#ft .ft-nav li 
+{
+  float: left;
+  margin-right:40px;
+  font-size: 1.1em;
+  width:186px;
+}
+
+#ft .ft-nav li.last
+{
+  margin:0px;
+}
+
+#ft .ft-nav li ul 
+{
+}
+
+#ft .ft-nav li li 
+{
+  float: none;
+  line-height:1.34em;
+  margin:0px;
+}
+
+#ft .ft-nav li li a:hover 
+{
+text-decoration: underline;
+color: #0048A6;
+}
+
+#ft .ft-copyright {
+	margin:0;
+	padding-bottom:11px;
+	padding-top:10px;
+	text-align:center;
+}
+
+.langEn{
+	width:590px !important;	
+}
+
+.langEs{
+	width:692px !important;
+}
+
+.langRu{
+	width:783px !important;
+}
+
+.langFr{
+	width:745px !important;
+}
+
+.langZh{
+	width:400px !important;	
+}
+
+/* -----------end footer navigation ----------------*/
+
+.loginBar
+{
+  border-bottom: 1px solid #aeaeae;
+  border-left: 1px solid #aeaeae;
+  border-right: 1px solid #aeaeae;
+  padding: 3px;
+  text-align: right;
+}
+
+#logoMenu
+{
+  margin: 25px 0px 5px;
+}
+
+#searchBar form *
+{
+  vertical-align: middle;
+}
+
+#searchBar .searchBtn
+{
+  background-color:transparent;
+  background-image:url(../images5/searchbtn.gif);
+  background-repeat:no-repeat;
+  border:0 none;
+  height:22px;
+  width:80px;
+}
+
+#searchBar
+{
+  background-image: url(../images5/search_grad.jpg);
+  background-repeat: no-repeat;
+  border-top: 1px solid #FED500;
+  margin-bottom: 10px;
+  padding: 16px;
+  overflow:hidden;
+}
+
+#searchBar img
+{
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.quickLinks
+{
+  overflow: hidden;
+  float:right;
+}
+
+.quickLinks li
+{
+  border-left: 1px solid #DEDEDE;
+  float: left;
+  padding-left: 14px;
+  padding-right: 14px;
+  text-align: center;
+}
+
+.quickLinks li.first
+{
+  border: 0px none;
+}
+
+.quickLinks .iconLabel
+{
+  text-align: center;
+}
+
+.lang
+{
+  float: left;
+  margin-right: 5px;
+}
+
+.siteSearch
+{
+  float: left;
+}
+
+.siteOptions
+{
+  float:right;
+  overflow:hidden;
+}
+
+#breadcrumbs
+{
+  margin-bottom: 10px;
+}
+
+#pagination{
+  padding: 10px;
+  text-align: right;
+}
+
+.nav-section
+{
+  margin-bottom:10px;
+}
+
+.nav-section .main
+{
+  padding:5px;
+}
+
+.iNav-section .main
+{
+  padding:3px;
+}
+
+.iNav-section .main .item-hl
+{
+  border:0px none;
+}
+
+.header1, .header2, .header3
+{
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  height: 23px;
+  padding: 6px 0px 0px 10px;
+}
+
+.header1
+{
+  background-image: url(../images5/header1.jpg);
+}
+
+.header2
+{
+  background-image: url(../images5/header2.jpg);
+}
+
+.header3
+{
+  background-image: url(../images5/header3.jpg);
+}
+
+.main
+{
+  border-bottom: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  padding: 5px;
+}
+
+.nav-section .main li
+{
+  padding: 5px;
+  border-top: 1px solid #dedede;
+}
+
+.nav-section .main li.first
+{
+  padding: 5px;
+  border-top: 0px none;
+}
+
+.nav-section .main li a
+{
+  display: block;
+}
+
+#category .item-hg, .item-hl
+{
+  border-bottom:1px dashed #aeaeae;
+}
+
+.item-hg, .item-hl
+{
+  overflow: hidden;
+}
+
+.item-hg .item-u, .item-hl .item-u
+{
+  padding: 1%;
+}
+
+.item-hg .item-u
+{
+  float: left;
+  /*
+   * Width - padding(right & left) = full width
+   * i.e.: 50% - 1% * 2 = 48%
+   *
+   * 48% for 2 items column
+   * 31.3% for 3 items column
+   * 23% for 4 items column
+   * 18% for 5 items column
+   *
+   */
+  width: 31.3%;
+}
+
+.item-hl .item-u
+{
+  float: left;
+  width: 98%;
+}
+
+.item-u .item-img, #item .item-u .item-img, #basket .item-img, #wishlist .item-img
+{
+  float:none;
+  height:100px;
+  position:relative;
+  text-align:center;
+}
+
+.item-u .item-img{
+width:100px;
+}
+
+#item .item-u .item-img
+{
+  width:100px;
+}
+
+.item-u .item-title
+{
+  min-height:30px;
+}
+
+.item-u .item-desc, #item .item-u .item-desc
+{
+  float:none;
+  margin-top:5px;
+  overflow:hidden;
+}
+
+.item-u .item-desc .price, #item .item-desc .price 
+{
+  position: relative;
+}
+
+.item-u .item-desc .price .symbol, #item .item-desc .price .symbol
+{
+  vertical-align:middle;
+}
+
+.item-u .item-desc .price .dollars, #item .item-desc .price .dollars
+{
+
+}
+
+.item-u .item-desc .price .cents, #item .item-desc .price .cents
+{
+  vertical-align:top;
+}
+
+#item
+{
+  overflow: hidden;
+}
+
+#item .item-img
+{
+  float: left;
+  text-align:center;
+  width: 25%;
+}
+
+#item .item-desc
+{
+  float: right;
+  width: 74%;
+}
+
+#item .item-ldesc
+{
+  /**float: left;*/
+  margin-top: 10px;
+}
+
+#item .item-desc .shortDesc
+{
+  padding:10px 0px;
+}
+
+#item .item-section, #item .item-ldesc
+{
+  border-bottom:1px dashed #aeaeae;
+  clear: both;
+  padding:10px 0px;
+}
+
+#item .item-section .item-hg
+{
+  border:0px none;
+}
+
+#item .item-section h4, #item .item-ldesc h4
+{ 
+  border-bottom:1px solid #163F14;
+  border-top:1px solid #163F14;
+  clear: both;
+  margin-bottom:13px;
+  padding:5px;
+}
+
+#item .item-options
+{
+  text-align:right;
+}
+
+#item .item-options .qty
+{
+  padding:0px 0px 10px;
+}
+
+#item .item-options .stock
+{
+  padding:0px 0px 10px;
+}
+
+#item .item-attr-section
+{
+  margin-top:15px;
+}
+#item .item-attributes .attrib, #register .attrib, #myaccount .attrib, #shipAddress .attrib, #review .attrib, #confirm .attrib , #checkout .attrib, #wishlist .attrib, #contactUs .attrib, #creditApp .attrib, #retailer .attrib, #solrSearch .attrib, .ip2locat .attrib
+{
+  overflow:hidden;
+  padding:5px 0px;
+}
+
+#item .item-attributes .attrib label, #register .attrib label, #myaccount .attrib label, #shipAddress .attrib label, #checkout .attrib label, #wishlist .attrib label, #contactUs .attrib label, #creditApp .attrib label, #retailer .attrib label, #solrSearch .attrib label, .ip2locat .attrib label
+{
+  float:left;
+  width:110px;
+}
+
+#item .item-attributes .attrib div.field, #register .attrib div.field, #myaccount .attrib div.field, #shipAddress .attrib div.field, #review .attrib div.field, #confirm .attrib div.field, #checkout .attrib div.field, #wishlist .attrib div.field, #contactUs .attrib div.field, #creditApp .attrib div.field, #retailer .attrib div.field, #basket #basketdata .attrib div.field, #solrSearch .attrib div.field, .ip2locat .attrib div.field
+{
+  float:left;
+  margin-left:10px;
+  width: auto;
+}
+
+#item .item-attributes .attrib div.field .warning
+{
+  width:146px;
+}
+
+#item .item-attributes .attrib div.field select
+{
+  width:145px;
+}
+
+/* style for the selection of grid and list view links*/
+#item-hview
+{
+  border-bottom: 1px solid #DCDCDC;
+  border-top: 1px solid #DCDCDC;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#item-gview
+{
+  float: left;
+}
+
+#item-lview
+{
+  float: left;
+}
+
+.item-list-price
+{
+  text-decoration: line-through;
+}
+
+#item-list .item-hl .item-img
+{
+  float: left;
+overflow:hidden;
+}
+
+#item-list .item-u .item-desc
+{
+  padding-left: 15px;
+}
+
+.item-desc .item-title a
+{
+  text-decoration: none;
+}
+
+.item-desc .item-title a:hover
+{
+  text-decoration: underline;
+}
+
+.item-desc .desc
+{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#sortBy
+{
+  float:right;
+}
+
+#loginBox h1, #checkout h1, #register h1, #basket h1, #myaccount h1, #retailer h1, #creditApp h1, #contact_box h1, #review h1, #confirm h1, #wishlist h1, 
+#compare h1, #quickOrder  h1, #review h1, #main_advsearch h1, #custom h1, #reviewDetails h1
+{
+  border-bottom:1px dotted #BBBBBB;
+  margin-bottom:10px;
+  padding-bottom:5px;
+}
+
+/** TODO: rename, LOGIN **/
+#loginBox .u-leftpad{
+  margin-left:15px;
+}
+/** TODO: rename, LOGIN **/
+#loginBox .login_content{
+  height:20px;
+}
+
+#register .shippedTo .attrib div.field, #checkout .shippedTo .attrib div.field, #basket #basketdata .attrib div.field
+{
+  width: 20px;;
+}
+
+#register .shippedTo .attrib label, #checkout .shippedTo .attrib label 
+{
+  width: auto;
+}
+
+.filter
+{
+  width: 100%;
+}
+
+.show
+{
+  display: block;
+}
+
+.hide
+{
+  display: none;
+}
+
+.notice, .shippedTo,  #payment_method, #giftCertificates, .passchanged, .question, .orderNo
+{
+  border: 1px dashed #DFA200;
+}
+
+#wishlist .notice
+{
+  margin:0 auto;
+  padding:10px;
+  width:260px;
+}
+
+.question
+{
+  margin:20px 0;
+  padding:10px;
+  clear:both;
+}
+
+.editPayment
+{
+  float:left;
+  margin-bottom:15px;
+  margin-top:15px;
+  padding:5px;
+  width:33%;
+}
+
+.editPayment .title
+{
+  float:left;
+  font-weight:bold;
+  width:56%;
+}
+
+.editPayment .desc
+{
+  float:right;
+  text-align:left;
+  width:35%;
+}
+
+.review_card 
+{
+  margin-bottom:10px;
+  margin-top:10px;
+  overflow:hidden;
+}
+
+.passchanged
+{
+  font-weight:bold;
+  padding:5px;
+  width:42%;
+}
+
+.shippedTo
+{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.shippedTo .radiobtn
+{
+  float: left;
+}
+
+.warning, .warning2
+{
+  border: 1px dashed #AF1515;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 3px;
+}
+
+.warning2
+{
+  float:left;
+  margin-bottom: 0px;
+  margin-left: 12px;
+  margin-top: 0px;
+  padding: 0 20px;  
+}
+
+.warning li
+{
+  list-style-position:inside;
+  list-style-type:disc;
+  padding-left:10px;
+}
+
+.btnclass, .btnLogin, .btnCheckout
+{
+  border: 1px solid #7F7F7F;
+  padding: 3px;
+}
+
+.okCancelPos
+{
+  clear:both;
+  float:left;
+  margin-top: 10px;
+}
+
+.vertSeparator
+{
+  border-left: 1px dotted #bbb;
+}
+
+.tablediv
+{
+  margin-top: 10px;
+}
+
+.t_align
+{
+  text-align: right;
+}
+
+/* Start Basket & Checkout styles */
+#basket .item-img, #wishlist .item-img
+{
+  height:auto;
+}
+
+#basket #showcustomerinput
+{
+  width:97%;
+  overflow:hidden;
+}
+
+#basket #basketdata {
+margin-bottom:20px;
+margin-top:10px;
+overflow:hidden;
+padding:5px;
+width:260px;
+}
+
+#basket #basketdata .basketList
+{
+  margin:0px 0px 5px 30px;
+}
+
+#basket #basketdata .attrib
+{
+  float:left;
+  margin-top:5px;
+}
+
+#basket #basketdata .okCancelPos
+{
+  margin: 0;
+  float: right;
+  clear: none;
+}
+
+#basket .okCancelPos
+{
+  float:none;
+}
+
+.custom-item
+{
+  padding-left:20px;
+}
+
+.comment-totals
+{
+  margin-top:15px;
+  overflow:hidden;
+}
+
+.commentOrder {
+	float:left;
+	padding:5px;
+	width:260px;
+}
+
+.basket-totals
+{
+  float:right;
+  padding:5px;
+  text-align:right;
+  width:235px;
+}
+
+.item-desc .qtyShipped
+{
+  padding:10px 0px 0px;
+}
+
+.item-desc .deliveryDate
+{
+  
+}
+
+.orderNo
+{
+  padding:5px;
+}
+
+.checkout-bc
+{
+  border-bottom:1px solid #AEAEAE;
+  margin-bottom:10px;
+}
+
+.checkout-bc ul
+{
+  bottom:-1px;
+  overflow:hidden;
+  position:relative;
+}
+
+.checkout-bc li
+{
+  border-left:1px solid #AEAEAE;
+  border-right:1px solid #AEAEAE;
+  border-top:1px solid #AEAEAE;
+  float:left;
+  margin:0 3px;
+  padding:3px 5px;
+}
+
+.checkout-bc li.focus
+{
+  border-bottom:1px solid #fff;
+  border-left:1px solid #aeaeae;
+  border-right:1px solid #aeaeae;
+  border-top:1px solid #aeaeae;
+}
+
+#paymentGateway
+{
+  border-top:1px dashed #dfdfdf;
+  margin-top: 15px;
+  padding:10px 0px;
+}
+
+#paymentGateway
+ {
+  margin-top: 15px;
+ }
+ 
+#paymentGateway .attrib div.field
+{
+  width: 20px;
+}
+
+ #payment_method 
+{
+  float:left;
+  padding:5px;
+  margin: 0 90px 20px 0;
+}
+
+ #payment_method .attrib label
+{
+  width: 120px;
+}
+
+ #payment_method .attrib  div.field,  #giftCertificates .attrib div.field
+{
+  width: auto;
+}
+
+#giftCertificates
+{
+  float:left;
+  padding:5px;
+  margin:0 0 20px 0;
+}
+
+#giftCertificates .attrib label
+{
+  width: 180px;
+}
+
+#checkout .createRegularAcc
+{
+  margin-bottom:5px;
+  text-align:center;
+}
+
+#checkout .createRegularAcc a
+{
+  text-decoration: none;
+}
+
+#checkout .createRegularAcc a:hover
+{
+ text-decoration: underline;
+}
+
+/* End Basket & Checkout styles */
+
+
+.productTable, .orderTable, .shipTable
+{
+  width: 100%;
+  border: 1px solid #CFCFCF;
+}
+
+.productTable th, .orderTable th, .shipTable th
+{
+  background-color:#DFDFDF;
+  border:1px solid #CFCFCF;
+  font-weight:bold;
+  text-align:center;
+}
+
+.productTable td, .orderTable td, .shipTable td
+{
+  border-bottom: 1px solid #CFCFCF;
+  border-left: 1px solid #CFCFCF;
+  border-right: 1px solid #CFCFCF;
+  padding: 5px;
+  vertical-align:top;
+}
+
+.shipTable td
+{
+  text-align: center;
+}
+.productTable .qty
+{
+  text-align:center;
+  width:25px;
+}
+
+#wishlist .productTable td
+{
+  padding: 7px;
+}
+
+#myaccount_menu
+{
+  margin-bottom:7px;
+  overflow:hidden;
+}
+
+#myaccount_menu .acclink
+{
+  float:left;
+  width: 33%;
+}
+#myaccount_menu .acclink div
+{
+  padding-bottom: 10px;
+}
+
+#review .name, #confirm .name
+{
+  font-weight: bold;
+  float: left;
+  width: 120px;
+}
+
+#review .attrib div.field
+{
+  margin-left:0px;
+}
+
+#compare .comparebox
+{
+  float: left;
+  width: 32%;
+  padding: 5px;
+}
+
+#compare .image
+{
+  height: 100px;
+  text-align:center;
+}
+
+#compare .details, #item .details
+{
+  border-bottom:1px solid #CCCCCC;
+  margin:5px 0;
+  overflow:hidden;
+  padding-bottom:3px;
+}
+
+#compare .details .left, #item .details .left
+{
+  float: left;
+}
+
+#compare .details .right, #item .details .right
+{
+  float: right;
+  width:67%;
+}
+
+#item .matrix .productTable .vLabel
+{ 
+  vertical-align:middle;
+}
+
+#item .details
+{
+  padding:0;
+  position:relative;
+}
+
+
+#item .details .left
+{
+  background-color:#DFDFDF;
+  height:100%;
+  padding:3px 0 3px 8px;
+  position:absolute;
+  width:30%;
+}
+
+ #item .details .right
+{
+  padding-bottom:3px;
+  padding-top:3px;
+}
+
+#item .properties
+{
+  margin-top: 20px;
+}
+
+.currency
+{
+  float: left;
+}
+
+#quickOrder .content
+{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.checkout-bc li.pf_link
+{
+  border: none;
+  float: right;
+}
+
+#contactUs .companyInfo .address
+{
+  padding:0px 0px 10px 5px;
+}
+
+#contactUs .question #Department
+{
+	color:#a1a1a1;
+	font-style:italic;
+	width:157px;
+}
+
+#contactUs .question .okCancelPos
+{
+  float:none;
+}
+
+#creditApp .attrib label
+{
+  width:250px;
+}
+
+#creditApp .attrib .bank-release-box label
+{
+  float:none;
+}
+
+#creditApp fieldset
+{
+  border-bottom:1px solid #DEDEDE;  
+  padding-bottom:10px;
+  margin-bottom:15px;
+}
+
+#creditApp fieldset fieldset
+{
+  border:0px none;  
+}
+
+#creditApp .reference-instructions 
+{
+  padding:10px 0px;
+}
+#creditApp .trade-references 
+{
+  padding:20px 0px;
+}
+#creditApp .trade-references .reference 
+{
+  margin-bottom:20px;
+}
+#creditApp .trade-references .row 
+{
+  margin-bottom:5px;
+  overflow:hidden;
+}
+#creditApp .trade-references .row .left-items 
+{
+  float:left;
+  width:350px;
+}
+#creditApp .trade-references .row .right-items 
+{
+  float:left;
+  width:300px;
+}
+#creditApp .trade-references .right-items .left, #creditApp .trade-references .right-items .right 
+{
+  float:left;
+}
+#creditApp .trade-references .row .right-items .left 
+{
+  width:70px;
+}
+
+#retailer .field input, #retailer .field select
+{
+  width:146px;
+}
+
+#retailer .search-area 
+{
+  margin:15px 0px; 
+  overflow:hidden;
+  width:275px;
+} 
+
+#retailer .search-area .okCancelpos
+{
+  clear:none;
+  float:none;
+} 
+
+#retailer .retailer-results 
+{
+  border-top:1px solid #dedede;
+  padding-top:15px;
+}
+
+#retailer .retailer-results .results-info 
+{
+  margin-bottom:20px;
+}
+
+/*--advanced search----*/
+
+#solrSearch .advsearch_search
+{
+  padding-bottom:5px;
+}
+
+.resultNav
+{
+  border:1px dotted #BBBBBB;
+  margin-bottom:10px;
+  padding:3px;
+  overflow:hidden;
+}
+
+.resultNav .pages
+{
+  float:left;
+}
+
+#solrSearch .resultNav .qty
+{
+  float:right;
+}
+
+#solrSearch .okCancelPos
+{
+  float:none;
+  clear:none;
+}
+
+.resultNav .pages .pagnPrev, 
+.resultNav .pages .pagnLead, 
+.resultNav .pages .pagnSep,
+.resultNav .pages .pagnCur,
+.resultNav .pages .pagnMore,
+.resultNav .pages .pagnLink, 
+.resultNav .pages .pagnNext
+{
+  padding:3px;
+}
+
+.resultNav .pages .pagnLink,
+.resultNav .pages .pagnNext,
+.resultNav .pages .pagnPrev
+{
+  text-decoration:none;
+}
+
+.resultNav .pages a.pagnNext:hover,
+.resultNav .pages a.pagnPrev:hover
+{
+  text-decoration:underline;
+}
+
+#reviewDetails .review
+{
+  margin-bottom:10px;
+}
+
+#reviewDetails .reviewHeader img
+{
+  vertical-align:middle;
+}
+
+#reviewDetails .reviewHeader b.title
+{
+  text-transform:capitalize;
+}
+
+#reviewDetails .reviewHeader .date
+{
+}
+
+#reviewDetails .reviewBody p.author em
+{
+  background-image: url(../images5/review/authorPointer.png);
+  background-position:50% 100%;
+  background-repeat:no-repeat;
+  padding-bottom:7px;
+  text-transform:capitalize;  
+}
+
+#reviewDetails .reviewBody .comment
+{
+  background-color:#E4E4E4;
+  margin:7px 10px 0;
+  padding:10px;
+}
+
+.ip2locat .attrib label
+{
+  width:50px;
+}
+
+.ip2locat .attrib div.field
+{
+  width:105px;
+}
+
+.ip2locat .attrib div.field input
+{
+  width:100%;
+}
+
+/* ------------------------------------------------------------------------
+ * YUI CSS Overrides
+ ------------------------------------------------------------------------ */
+.yui-t2 .yui-b
+{
+  /*  left navigation bar to 181px  */
+  width:13.9230em;
+}
+
+
+/* ------------------------------------------------------------------------
+ * Font
+ ------------------------------------------------------------------------ */
+h1
+{
+  font-size: 2em; 
+  font-weight: bold;
+}
+
+h2
+{
+  font-size: 1.2em; 
+  font-weight: bold;
+} 
+ 
+.ft-copyright 
+{
+  font-size: 10px;
+}
+
+#ft .ft-nav li li 
+{
+  font-size: 11px;
+}
+
+#ft .ft-nav li li a 
+{
+  font-weight: normal;
+}
+
+#ft .ft-nav li a 
+{
+  font-weight: normal;
+}
+
+#ft .ft-copyright {
+	clear:both;
+	font-size:12px;
+}
+ 
+.quickLinks .iconLabel
+{
+  font-size: 10px;
+}
+
+#searchBar p
+{
+  font-weight: bold;
+}
+
+#searchBar .searchBtn
+{
+  font-weight:bold;
+}
+
+.header1, .header2, .header3
+{
+  font-weight: bold;
+}
+
+.item-u .item-title
+{
+  font-size:12px;
+  font-weight: bold;
+}
+
+.item-desc .code, .item-u .item-desc .qty, .item-u .item-desc .price
+{
+  font-size: 11px;
+}
+
+.item-u .item-desc .qty
+{
+  font-weight: bold;
+}
+
+.item-u .item-desc .price, #item .item-desc .price
+{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.item-u .item-desc .price .symbol, #item .item-desc .price .symbol
+{
+  font-size: 17px;
+}
+
+.item-u .item-desc .price .dollars, #item .item-desc .price .dollars
+{
+  font-size: 24px;
+}
+
+.item-u .item-desc .price .cents, #item .item-desc .price .cents
+{
+  font-size:14px;
+}
+
+.item-price-saved, .item-price
+{
+  font-weight: bold;
+}
+
+.item-u .item-desc .price
+{
+  font-weight: bold;
+}
+
+#item .item-desc h1.title
+{
+  font-size: 16px;
+  font-weight:bold;
+}
+
+#item .item-options .qty label
+{
+  font-weight:bold;
+}
+
+#item .item-options .stock p
+{
+  font-weight:bold;
+}
+
+#item .item-section h4, #item .item-ldesc h4
+{
+  font-weight:bold;
+}
+
+#item .matrix .productTable .vLabel
+{
+  font-weight:bold;
+}
+
+#item .matrix .productTable
+{
+  font-size:10px;
+}
+
+.info_needed
+{
+  font-size: 10px;
+}
+
+.needed_star
+{
+  font-weight: bold;
+}
+
+.checkout-bc li.focus
+{
+  font-weight:bold;
+}
+.basket-totals .totalRow .desc
+{
+  font-weight:bold;
+}
+
+.productCount 
+{
+  font-size: 8px;
+  font-weight: normal;
+}
+
+.editPayment .title
+{
+  font-weight: bold;
+}
+
+#creditApp .trade-references .reference span 
+{
+  font-weight:bold;
+}
+
+#retailer .retailer-results .item-u dt
+{
+  font-weight:bold;
+}
+
+#solrSearch .resultNav .qty
+{
+  font-weight:bold;
+}
+
+.resultNav .pages .pagnLead, 
+.resultNav .pages .pagnCur,
+.resultNav .pages .pagnMore
+{
+  font-weight:bold;
+}
+
+#reviewDetails .reviewBody p.author, #reviewDetails .reviewBody p.author em
+{
+  font-size:12px; 
+  font-style:italic;  
+}
+
+/* ------------------------------------------------------------------------
+ * LiveLeader Chat Application
+ ------------------------------------------------------------------------ */
+
+._liveleader 
+{
+   width:200px !important;
+} 
+
+/* ------------------------------------------------------------------------
+ * bundles
+ ------------------------------------------------------------------------ */
+
+.bundle_box{
+  float: left;
+  padding: 10px;
+  border: solid 1px #aeaeae;
+
+}
+
+#bargains_qty
+{
+  width: 25px;
+}
+
+/* ------------------------------------------------------------------------
+ * Contact Us
+ ------------------------------------------------------------------------ */
+
+.defaultText {
+	-moz-border-radius:3px 3px 3px 3px;
+	border:1px solid #A1A1A1 !important;
+	color:#A1A1A1;
+	font-style:italic;
+	height:20px;
+	width:154px;
+}
+
+#Question.defaultText {
+	height:100px;
+	width:355px;
+}
+
+#contactUs .question #Department .departmentText {
+	color: #000000; 
+}
+
+.question .okCancelPos .btnclass {
+	-moz-border-radius:5px 5px 5px 5px;
+	border:1px solid #7F7F7F;
+	padding:3px;
+}
+
+/* ------------------------------------------------------------------------
+ * Register Success
+ ------------------------------------------------------------------------ */
+
+.success{
+	height:240px;
+}
+
+.registMessage {
+	height:45px;
+	padding-bottom:50px;
+	padding-top:14px;
+}
+
+.registMessage p {
+	float:left;
+	margin-top:27px;
+	padding-right:10px;
+	width:463px;
+}
+ 
+.registSuccessCheckMark {
+	background-image:url("../images5/checkmark_green.png");
+	float:left;
+	height:40px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:9px;
+	width:46px;
+}
+
+/* ------------------------------------------------------------------------
+ * FAQ
+ ------------------------------------------------------------------------ */
+
+.faqSearchList{
+	width:100%;
+}
+
+.faqSearchTitle{
+	float:left;
+	height:26px;
+	margin-bottom:20px;
+	margin-top:20px;
+	width:57%;
+}
+
+.faqSearchDate {
+	float:left;
+	width:20%;
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+ .saveCancelButton {
+	float:right;
+	padding-top:6px;
+	width:633px;
+}
+
+.faqNickname{
+   width:150px;	
+}
+
+.btnSearchFAQ {
+	-moz-border-radius:5px 5px 5px 5px;
+	border:1px solid #7F7F7F;
+	padding:2px;
+	margin-left:3px;
+	background-color:#DFDFDF;
+}
+
+.fieldSearchFAQ {
+	width:140px;
+}
+
+.faqQuestion{
+	margin-bottom:5px;
+}
+
+.faqAnswer{
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.faqDetailCenter {
+	-moz-border-radius:5px 5px 5px 5px;
+	background:none repeat scroll 0 0 #FFF2CF;
+	border:1px dashed #DFA200;
+	margin-top:20px;
+	padding:20px;
+}
+
+.faqDetailLeft{
+	border-left:1px dotted #ddd;
+	margin-top:20px;
+}
+
+.faqDetailLeft form {
+	margin-bottom:22px;
+	margin-top:15px;
+}
+
+.faqDetailLeftQ {
+	height:26px;
+	margin-bottom:20px;
+	margin-top:20px;
+}
+
+.faqDetailLeft b{
+    padding-bottom:20px;
+}
+
+.recentlyQuestionFAQ{
+	margin-top:20px;
+}
+
+.saveResetClose {
+	float:right;
+	padding-top:6px;
+	width:585px;
+}
+
+#item_content_center{
+	padding-left:25px;
+	border-left:1px dotted #ddd;
+}
+
+.answerDetail{
+	 width:80%;
+	 float:left;
+}
+
+.answerDate{
+	width:20%;
+	float:right;
+}
+
+.registerQuestion {
+	clear:both;
+	padding-top:10px;
+}
+
+.faqDetail{
+	padding-left:18px;
+}
+
+/* ------------------------------------------------------------------------
+ * Ship Cost Estimator
+ ------------------------------------------------------------------------ */
+
+
+.ship_cost_estimator ul{
+	height:115px;
+	padding-bottom:10px;
+	width:286px;
+}
+
+.ship_cost_estimator {
+	background-color:#FFF2CF;
+	border:1px dashed #DFA200;
+	float:right;
+	margin-bottom:20px;
+	margin-top:20px;
+	width:295px;
+}
+
+.ship_cost_estimator li {
+	padding-bottom:5px;
+	padding-top:5px;
+	width:301px;
+}
+
+.ship_cost_estimator li label {
+	float:left;
+	margin-bottom:5px;
+	margin-top:7px;
+	padding-left:10px;
+	padding-right:6px;
+	text-align:right;
+	width:103px;
+}
+
+.ship_cost_estimator li input {
+	float:left;
+	margin-bottom:5px;
+	margin-top:5px;
+	width:164px;
+}
+
+.ship_cost_estimator li select {
+	float:left;
+	margin-bottom:5px;
+	margin-top:5px;
+	width:166px;
+}
+
+.ship_cost_estimator .btnCalculate {
+	float:right;
+	margin-bottom:8px;
+	margin-right:10px;
+	margin-top:2px;
+}
+
+#ft .ft-navUl {
+	margin:0 auto;
+	width:776px;
+}
