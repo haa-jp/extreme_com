@@ -4,3 +4,4 @@
 *.project
 *.swp
 *.DS_Store
+.pydevproject
