@@ -1,0 +1,120 @@
+<div class="megamenu_container megamenu_dark_bar megamenu_light"><!-- Begin Menu Container -->
+
+        
+        <ul class="megamenu"><!-- Begin Mega Menu -->
+           
+
+            <li class="megamenu_button"><a href="#_">Mega Menu</a></li>
+     
+          
+             <li class="shopcat"><a  class="megamenu" href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=23946")" >All Products</a> </li>
+
+#if($Menu2DTO.getItems().size()!=0)
+#foreach($itemIter in $Menu2DTO.getItems())
+#set($category = $pageTile.getItemObject($Menu2DTO, $itemIter, "c"))
+
+    <li><a  class="megamenu" href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$category.categoryid")"> $category.name</a> <!-- begin item -->
+           <!--  <li><a href="#_" class="megamenu_drop">Home</a> --> <!-- Begin Item -->
+            
+<div class="dropdown_fullwidth"><!-- Begin Item Container -->
+                
+            
+                    <div class="col_12">
+
+                        <h1> <a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$category.categoryid")"> Extreme Max $category.name</a></h1>
+                        <hr>
+
+                    </div>
+#if($category.name.toLowerCase().indexOf('power sports') != -1)
+                    <div class="col_4">
+<!--      <p><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$category.categoryid")"> $category.name</a></p>    -->
+          <h2> ATV and UTV Products</h2>
+          <p> Extreme Max&trade; ATV & UTV products range from innovations like the RampXtender&trade; to classics like heavy-duty tire chains. We're always looking for new ways to make your ATV or UTV work harder so you can do more outdoors. </p>
+          #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/nav_atv.vm")
+                    </div>
+                    
+                    <div class="col_4">
+          <h2> Snowmobile Products</h2>
+          <p> Extreme Max&trade; offers a complete line of traction and shop accessories. We specialize in products that make working on and around your sled easier, safer, and more efficient. </p>
+          #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/nav_snow.vm")
+                    </div>
+
+#elseif($category.name.toLowerCase().indexOf('dock & lift') != -1)
+                    <div class="col_4">
+<!--      <p><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$category.categoryid")"> $category.name</a></p>    -->
+          <h2>Marine Products</h2>
+          <p> Whether you want to organize with Slider Trax&trade; or load with guide-ons, Extreme Max&trade; has the products to simplify, secure, protect, and power your boat. </p>
+          #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/nav_marine.vm")
+                    </div>
+                    
+                    <div class="col_4">
+          <h2> The Boat Boss</h2>
+          <p> Extreme Max&trade; drive systems offer high-quality alternatives to manual boat lift power. Both Boat Lift Boss&trade; Direct Drive and Boat Lift Buddy&trade; Wheel Drive systems offer unsurpassed safety and customer satisfaction. </p>
+          ##parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/nav_snow.vm")
+
+                    </div>
+
+#elseif($category.name.toLowerCase().indexOf('product support') != -1)
+                    <div class="col_8">
+<p>Extreme Max Customer service is available  8am-5pm CST, Monday-Friday. We're here to help with technical support, warranty questions, product compatibility or availability. </p>
+          #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/nav_support.vm")
+                    </div>
+
+#end
+
+                    
+                    <div class="col_4">
+
+                        <h3>Quick Links</h3>
+
+                    </div>
+
+                    <div class="col_2 responsive_halfs">
+
+                        <ul class="list_unstyled">
+                           <li><a href="#_">Link One</a></li>
+                        </ul> 
+
+                    </div>
+
+                    <div class="col_2 responsive_halfs">
+
+                        <ul class="list_unstyled">
+                            <li><a href="#_">Link Two</a></li>
+                        </ul>   
+
+                    </div>
+          
+                </div><!-- End Item Container -->
+            <!-- </li> -->  <!-- End Item -->
+</li>
+
+#end
+#else <p> error </p>
+#end
+             <li class=""><a  class="megamenu" href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=23947")" >Contact Us</a> </li>
+        </ul><!-- End Mega Menu -->
+
+
+    </div><!-- End Menu Container -->
+#* 
+#if($Menu2DTO.getItems().size()!=0)
+<ul>
+#foreach($tempc in $Menu1DTO.items)
+  #set($category = $pageTile.getItemObject($Menu1DTO, $tempc, "c"))
+<li> $category.name </li>
+#if($category.name.toLowerCase().indexOf('atv/utv') != -1)
+      <li><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$category.categoryid")"> $category.name</a></li>
+   #elseif($category.name.toLowerCase().indexOf('snowmobile') != -1)
+      <li><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$category.categoryid")" >$category.name</a></li>
+  #elseif($category.name.toLowerCase().indexOf('marine') != -1)
+      <li><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$category.categoryid")"> $category.name</a></li>
+#end
+$tempc
+#end
+<li> test</li>
+</ul>
+#end
+*#
+<div>
+

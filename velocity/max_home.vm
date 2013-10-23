@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+#set($metadescription= $pageTile.getItemObject($categoryNameDTOHQL, $categoryNameDTOHQL.items.get(0), 'metadescription'))
+#set($metakeywords= $pageTile.getItemObject($categoryNameDTOHQL, $categoryNameDTOHQL.items.get(0), 'metakeywords'))
+#set($pagetitle= $pageTile.getItemObject($categoryNameDTOHQL, $categoryNameDTOHQL.items.get(0), 'pagetitle'))
+
+#if (!$pageTileDictionaryDTO)
+  #if ($_commandName)
+    #springBind( "${_commandName}.pageTileDictionaryDTO" )
+    #set ($pageTileDictionaryDTO = ${status.value})
+  #end
+#end
+
+#if($request.isSecure())
+  #if ($request.getServerPort() ==443)
+    #set ($baselink = "https://$request.getServerName()$request.getContextPath()/")
+  #else
+    #set ($baselink = "https://$request.getServerName():$request.getServerPort()$request.getContextPath()/")
+  #end
+#else
+  #if ($request.getServerPort() ==80)
+    #set ($baselink = "http://$request.getServerName()$request.getContextPath()/")
+  #else
+    #set ($baselink = "http://$request.getServerName():$request.getServerPort()$request.getContextPath()/")
+  #end
+#end
+
+<html  xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href="$baselink"/> 
+    <meta name="description" content="#if($metadescription!="") $metadescription #end" />
+    <meta name="keywords" content="#if($metakeywords!="")$metakeywords #end" />
+   <link rel="stylesheet" type="text/css" href="store/$vendorSettingsDTO.vendorId/assets/themes/$vendorSettingsDTO.skinname//css/gallery.css"/>
+    <title>$!pagetitle</title>
+#if($vendorSettingsDTO.themeId) 
+  #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/commonCSS-JS.vm")
+#else
+  #parse("$vendorSettingsDTO.vendorId/commonCSS-JS.vm")
+#end
+#*
+<script>
+$(document).ready(function($){
+    $('.megamenu').megaMenuCompleteSet({
+        menu_speed_show : 300, // Time (in milliseconds) to show a drop down
+        menu_speed_hide : 200, // Time (in milliseconds) to hide a drop down
+        menu_speed_delay : 200, // Time (in milliseconds) before showing a drop down
+        menu_effect : 'hover_fade', // Drop down effect, choose between 'hover_fade', 'hover_slide', etc.
+        menu_click_outside : 1, // Clicks outside the drop down close it (1 = true, 0 = false)
+        menu_show_onload : 0, // Drop down to show on page load (type the number of the drop down, 0 for none)
+        menu_responsive:1 // 1 = Responsive, 0 = Not responsive
+    });
+});
+</script> 
+*#
+  </head>
+  <body>
+    <div id="masterWrapper">
+#if($vendorSettingsDTO.themeId) 
+  #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/header.vm")
+#else
+  #parse("$vendorSettingsDTO.vendorId/header.vm")
+#end
+      <div id="bd">
+         <div id="homecontainer">
+
+<div id="yui-main">
+   <div class="yui-b">
+      <div class="yui-gd"> <!-- the "special grid" -->
+         <div class="yui-u first"> #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/blog_list.vm")</div>
+         <div class="yui-u">       #parse($home_advertisingDTO.getItems().get(0).get('home_advertising'))</div>
+      </div>
+   </div>
+   <div class="yui-b">
+   
+     #parse($home_centerDTO.getItems().get(0).get('home_center'))
+
+   </div>
+</div>
+
+         </div> <!-- end homecontainer -->
+
+## Google Search widget Start
+<div style="margin: 0 auto; width: 95%">
+<script>
+  (function() {
+    var cx = '003839047038147876990:ntbuwqnrbtg';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
+## Widget end
+
+      </div> <!-- end bd -->
+
+#if($vendorSettingsDTO.themeId) 
+  #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/footer.vm")
+#else
+  #parse("$vendorSettingsDTO.vendorId/footer.vm")
+#end
+    </div> <!-- end masterWrapper-->
+  </body>
+
+<script type="text/javascript" src="store/$vendorSettingsDTO.vendorId/assets/themes/$vendorSettingsDTO.skinname/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="store/$vendorSettingsDTO.vendorId/assets/themes/$vendorSettingsDTO.skinname/js/s3Slider.js"></script>
+<script type="text/javascript" src="store/$vendorSettingsDTO.vendorId/assets/themes/$vendorSettingsDTO.skinname/js/extreme-gallery.js"></script>
+<script type="text/javascript">
+   $(function() {
+      $("div#slider").s3Slider({
+         timeOut: 8000
+      });
+   });
+</script>
+
+</html>

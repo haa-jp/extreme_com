@@ -1,0 +1,94 @@
+#if($CookiesDTO && $CookiesDTO.getCookieValue('preferences'))
+  #if($CookiesDTO.getCookieValue('preferences')=="sw")
+    #set($ct= "sw")
+  #elseif($CookiesDTO.getCookieValue('preferences')=="rp")
+    #set($ct= "rp")
+  #elseif($CookiesDTO.getCookieValue('preferences')=="sa")
+    #set($ct= "sa")
+  #elseif($CookiesDTO.getCookieValue('preferences')=="h")
+    #set($ct= "h")
+  #end 
+#else
+  #set($ct= "sw")
+#end
+
+#set($snowId = 23897)
+#set($rampId = 23957)
+#set($accessoryId = 23918)
+#set($homeId = 23908)
+
+#if($ct && $ct != "")
+
+  #if($ct == "sw")
+    #set($catselect = $Menu1DTO)
+    #set($mainId = $snowId)
+
+  #elseif($ct == "rp")
+    #set($catselect = $Menu2DTO)
+    #set($mainId = $rampId)    
+
+  #elseif($ct == "sa")
+    #set($catselect = $Menu3DTO)
+    #set($mainId = $accessoryId)
+
+  #elseif($ct == "h")
+    #set($catselect = $MenuMainDTO)
+    #set($mainId = $homeId)
+  #end
+
+#end
+
+      <div id="hd">
+        <script type="text/javascript" language="javascript">
+          function createCookie(){
+             var args = arguments;
+             if(args.length == 1){
+               var expdate = new Date();
+               expdate.setFullYear(expdate.getFullYear()+20);
+               YAHOO.util.Cookie.set("preferences", args[0], { expires: expdate,path: "/" }); 
+             }
+             else{
+               var expdate = new Date();
+               expdate.setFullYear(expdate.getFullYear()+20);
+               YAHOO.util.Cookie.set(args[0], args[1], { expires: expdate,path: "/" }); 
+             }
+          }
+#if(!($CookiesDTO && $CookiesDTO.getCookieValue('preferences')))
+          createCookie('sw');
+#end
+        </script>      
+        <ul class="home-links">
+          <li><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$homeId")" onclick="ceateCookie('h')" title="Return to Home Page">Home</a></li>
+<!--          <li><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$snowId")" onclick="createCookie('sw')">Snowmobile Traction</a></li>
+          <li><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$rampId")" onclick="createCookie('rp')">Ramps</a></li>
+          <li><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=$accessoryId")" onclick="createCookie('sa')">Accessories</a></li>
+          <li><a href="$seourl.encodeURL("store.html?vid=$vendorSettingsDTO.vendorId&cid=23906")">About Us</li>  -->
+        </ul>
+        <ul>
+        
+#if($welcomeMatDTO)
+  #if(${welcomeMatDTO.loggedIn})
+          <li><strong>#springMessage("vm.header.welcome"), ${welcomeMatDTO.firstName}!</strong> 
+    #if($pageTileDictionaryDTO.templateName == "checkout_completed.vm")
+          <a href='https://${appSettingsDTO.getDomainAlias($vendorSettingsDTO.vendorId)}/${appSettingsDTO.AppName}/signout.html?vid=${vendorSettingsDTO.vendorId}'><em>#springMessage("vm.header.logout")</em></a>
+    #else
+          <a href='https://${appSettingsDTO.getDomainAlias($vendorSettingsDTO.vendorId)}/${appSettingsDTO.AppName}/signout.html?vid=${vendorSettingsDTO.vendorId}&mt=1&redirecturl=${welcomeMatDTO.currentEncodePage}'><em>#springMessage("vm.header.logout")</em></a>
+    #end
+          </li>
+          <li>
+            <a href="myaccount.html?mode=billingaddress"><em>My Account</em></a>
+          </li>
+  #else
+          <li><a href='https://${appSettingsDTO.getDomainAlias($vendorSettingsDTO.vendorId)}/${appSettingsDTO.AppName}/signin.html?vid=${vendorSettingsDTO.vendorId}&mt=1&redirecturl=${welcomeMatDTO.currentEncodePage}'><strong>Sign In</strong></a>. New User? <a href='https://${appSettingsDTO.getDomainAlias($vendorSettingsDTO.vendorId)}/${appSettingsDTO.AppName}/register.html?vid=${vendorSettingsDTO.vendorId}&mt=1'><em>Sign Up.</em></a></li>
+  #end
+#end
+         <li> <a href="basket.html?vid=$vendorSettingsDTO.vendorId">Basket</a></li>
+        </ul>
+<div class="lookup">
+    #parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/search_form.vm")
+</div>
+      </div>      <!-- end #hd -->
+
+#parse("/$vendorSettingsDTO.vendorId/$vendorSettingsDTO.themeId/navigation.vm")
+
+
