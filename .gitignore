@@ -1,5 +1,6 @@
 *.class
 *.pyc
 *.pyo
-*.DS_Store
+*.project
 *.swp
+*.DS_Store
