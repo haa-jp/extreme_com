@@ -1,2 +1,6 @@
 
-test for github
+(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
